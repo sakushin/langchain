@@ -435,8 +435,8 @@ class ChatOpenAI(BaseChatModel):
         model = self.model_name
         if model == "gpt-3.5-turbo":
             # gpt-3.5-turbo may change over time.
-            # Returning num tokens assuming gpt-3.5-turbo-0301.
-            model = "gpt-3.5-turbo-0301"
+            # Returning num tokens assuming gpt-3.5-turbo-0613.
+            model = "gpt-3.5-turbo-0613"
         elif model == "gpt-4":
             # gpt-4 may change over time.
             # Returning num tokens assuming gpt-4-0314.
@@ -466,7 +466,7 @@ class ChatOpenAI(BaseChatModel):
         if sys.version_info[1] <= 7:
             return super().get_num_tokens_from_messages(messages)
         model, encoding = self._get_encoding_model()
-        if model == "gpt-3.5-turbo-0301":
+        if model in ["gpt-3.5-turbo-0301", "gpt-3.5-turbo-0613", "gpt-3.5-turbo-16k", "gpt-3.5-turbo-0613-16k"]:
             # every message follows <im_start>{role/name}\n{content}<im_end>\n
             tokens_per_message = 4
             # if there's a name, the role is omitted

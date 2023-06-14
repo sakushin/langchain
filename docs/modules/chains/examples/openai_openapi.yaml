@@ -2321,7 +2321,7 @@ components:
       type: object
       properties:
         model:
-          description: ID of the model to use. Currently, only `gpt-3.5-turbo` and `gpt-3.5-turbo-0301` are supported.
+          description: ID of the model to use. Currently, only `gpt-3.5-turbo` and `gpt-3.5-turbo-0301` and `gpt-3.5-turbo-0613 and `gpt-3.5-turbo-16k`` and `gpt-3.5-turbo-0613-16k` are supported.
           type: string
         messages:
           description: The messages to generate chat completions for, in the [chat format](/docs/guides/chat/introduction).
