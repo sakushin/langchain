@@ -439,8 +439,8 @@ class ChatOpenAI(BaseChatModel):
             model = "gpt-3.5-turbo-0613"
         elif model == "gpt-4":
             # gpt-4 may change over time.
-            # Returning num tokens assuming gpt-4-0314.
-            model = "gpt-4-0314"
+            # Returning num tokens assuming gpt-4-0613.
+            model = "gpt-4-0613"
         # Returns the number of tokens used by a list of messages.
         try:
             encoding = tiktoken_.encoding_for_model(model)
@@ -471,7 +471,7 @@ class ChatOpenAI(BaseChatModel):
             tokens_per_message = 4
             # if there's a name, the role is omitted
             tokens_per_name = -1
-        elif model == "gpt-4-0314":
+        elif model in ["gpt-4-0314", "gpt-4-0613"]:
             tokens_per_message = 3
             tokens_per_name = 1
         else:

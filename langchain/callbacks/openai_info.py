@@ -7,10 +7,12 @@ from langchain.schema import AgentAction, AgentFinish, LLMResult
 MODEL_COST_PER_1K_TOKENS = {
     "gpt-4": 0.03,
     "gpt-4-0314": 0.03,
+    "gpt-4-0613": 0.03,
     "gpt-4-completion": 0.06,
     "gpt-4-0314-completion": 0.06,
     "gpt-4-32k": 0.06,
     "gpt-4-32k-0314": 0.06,
+    "gpt-4-32k-0613": 0.06,
     "gpt-4-32k-completion": 0.12,
     "gpt-4-32k-0314-completion": 0.12,
     "gpt-3.5-turbo": 0.002,
